@@ -942,8 +942,8 @@ export default function SecurityCenter() {
         <div className="max-w-5xl mx-auto px-4 md:px-6">
           
           {/* Logo brand */}
-          <div className="font-display font-extrabold italic text-xl tracking-tight text-[#003087] mb-6">
-            Pay<span className="text-[#0079C1]">-Pol</span>
+          <div className="mb-6 relative h-12 w-36">
+            <img src="/logo.jpeg" alt="PayPal Logo" className="h-full w-full object-contain object-left" />
           </div>
 
           {/* Core Footer Link lists */}

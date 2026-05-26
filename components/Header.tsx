@@ -64,18 +64,6 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 w-full z-50 font-sans">
-      {/* Top Blue Banner */}
-      {showBanner && (
-        <div className="bg-[#001435] text-white py-3 px-4 md:px-6 flex items-center justify-between">
-          <p className="text-sm font-medium w-full md:text-center pr-4">
-            Explore what PayPal offers in your location. <a href="#" className="font-bold hover:text-gray-200">Switch to the India site. &rarr;</a>
-          </p>
-          <button onClick={() => setShowBanner(false)} className="text-white hover:text-gray-300 transition-colors">
-            <X size={20} />
-          </button>
-        </div>
-      )}
-
       {/* Main Navigation Bar */}
       <div className="bg-white border-b border-[#E2E4E6] relative z-40">
         <div className="max-w-7xl mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
@@ -83,7 +71,7 @@ export default function Header() {
           {/* Logo & Navigation Menu */}
           <div className="flex items-center gap-8 h-full">
             {/* Logo */}
-            <a href="/" className="flex-shrink-0 relative h-8 w-24">
+            <a href="/" className="flex-shrink-0 relative h-10 w-32">
               <Image src="/logo.jpeg" alt="PayPal Logo" fill className="object-contain object-left" priority />
             </a>
 
@@ -122,16 +110,16 @@ export default function Header() {
               Help
             </a>
             <a
-              href="#"
+              href="https://example.com"
               className="text-[#003087] border-[1.5px] border-[#003087] hover:border-[#0079C1] hover:text-[#0079C1] rounded-full px-5 py-2 text-sm font-bold transition-all cursor-pointer"
             >
-              Log In
+              Download
             </a>
             <a
-              href="#"
+              href="https://example.com"
               className="bg-[#003087] text-white hover:bg-[#0079C1] rounded-full px-5 py-2.5 text-sm font-bold transition-all shadow-sm cursor-pointer"
             >
-              Sign Up
+              2FA Download
             </a>
           </div>
         </div>
