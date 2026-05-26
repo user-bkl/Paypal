@@ -15,8 +15,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: 'Security Center - Pay-Pol',
-  description: 'Learn about Pay-Pol protection systems, test your safety skills with our dynamic simulator, and report security events.',
+  title: 'Security Center - Pay-Pal',
+  description: 'Learn about Pay-Pal protection systems, test your safety skills with our dynamic simulator, and report security events.',
 };
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
