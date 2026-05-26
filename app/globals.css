@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pay-blue-dark: #003087;
+  --color-pay-blue-light: #0079C1;
+  --color-pay-blue-hover: #005EA6;
+  --color-pay-bg-light: #F5F7FA;
+  --color-pay-text-dark: #2C2E2F;
+  --color-pay-text-muted: #6C7378;
+  --color-pay-border-color: #E2E4E6;
+  
+  --font-sans: var(--font-sans), sans-serif;
+  --font-display: var(--font-outfit), sans-serif;
+}

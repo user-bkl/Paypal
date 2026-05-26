@@ -1,0 +1,6 @@
+{
+  "name": "Pay-Pol Security Center",
+  "description": "An interactive replica of the PayPal Security Center, featuring safety guides, a cyber security training quiz, report forms, and fully animated UI transitions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
