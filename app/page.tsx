@@ -279,10 +279,10 @@ export default function SecurityCenter() {
 
             {/* Grid Layout Cards */}
             <section className="max-w-5xl mx-auto px-4 md:px-6 mb-12">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
                 
-                {/* Experiencing Issue Card (lg:span-5 / multi layout) */}
-                <div className="lg:col-span-6 bg-[#F5F7FA] rounded-2xl p-6 md:p-8 flex flex-col justify-between shadow-xs border border-[#E2E4E6] hover:shadow-md transition-shadow">
+                {/* Experiencing Issue Card */}
+                <div className="bg-[#F5F7FA] rounded-2xl p-6 md:p-8 flex flex-col justify-between shadow-xs border border-[#E2E4E6] hover:shadow-md transition-shadow w-full">
                   <div>
                     <h2 className="font-display text-xl sm:text-2xl font-bold text-[#003087] leading-tight mb-4 text-left">
                       Experiencing a security issue right now?
@@ -344,89 +344,91 @@ export default function SecurityCenter() {
                   </ul>
                 </div>
 
-                {/* Card 2: Fraud Activations */}
-                <div className="lg:col-span-3 bg-[#F8F9FA] rounded-2xl overflow-hidden shadow-xs border border-[#E2E4E6] flex flex-col hover:-translate-y-1 hover:shadow-md transition-all">
-                  <div className="relative h-40 bg-[#0070BA] flex items-end justify-center select-none overflow-hidden">
-                    {/* SVG Illustration Header */}
-                    <div className="w-full flex items-center justify-center pb-2">
-                      <svg width="220" height="140" viewBox="0 0 220 140" fill="none" className="max-w-full h-auto">
-                        <rect x="25" y="45" width="170" height="70" rx="8" fill="#F0B939"/>
-                        <rect x="25" y="45" width="45" height="70" rx="8" fill="#D99E1C" fillOpacity="0.3"/>
-                        <path d="M47.5 70C47.5 76.5 44 82 39 84.5C34 82 30.5 76.5 30.5 70V61L39 57.5L47.5 61V70Z" fill="#1C5AB8"/>
-                        <path d="M39 59.5V82.5C42.5 80.5 45 76.5 45 70V62L39 59.5Z" fill="#3D82E6"/>
-                        <path d="M35 70L38 73L43 66" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-                        <rect x="80" y="58" width="65" height="10" rx="3" fill="white" fillOpacity="0.8"/>
-                        <text x="84" y="65" fill="#5C4103" fontFamily="Inter" fontSize="6" fontWeight="700">Security alert</text>
-                        <rect x="80" y="78" width="85" height="4" rx="2" fill="white" fillOpacity="0.6"/>
-                        <rect x="80" y="86" width="60" height="4" rx="2" fill="white" fillOpacity="0.6"/>
-                        <circle cx="175" cy="55" r="16" fill="#14BD7A" fillOpacity="0.2"/>
-                        <circle cx="175" cy="55" r="12" fill="#14BD7A"/>
-                        <path d="M172 56V52.5C172 50.8 173.3 49.5 175 49.5C176.7 49.5 178 50.8 178 52.5V56M170 56H180V61H170V56Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
+                {/* Right Side: Stack of Card 2 & Card 3 */}
+                <div className="flex flex-col gap-6 justify-between h-full w-full">
+                  
+                  {/* Card 2: Fraud Activations */}
+                  <div className="flex-1 bg-[#F8F9FA] rounded-2xl overflow-hidden shadow-xs border border-[#E2E4E6] flex flex-row hover:-translate-y-0.5 hover:shadow-md transition-all">
+                    <div className="relative w-1/3 bg-[#0070BA] flex items-center justify-center select-none overflow-hidden shrink-0">
+                      <div className="w-full flex items-center justify-center p-2">
+                        <svg width="220" height="140" viewBox="0 0 220 140" fill="none" className="max-w-full h-auto scale-90">
+                          <rect x="25" y="45" width="170" height="70" rx="8" fill="#F0B939"/>
+                          <rect x="25" y="45" width="45" height="70" rx="8" fill="#D99E1C" fillOpacity="0.3"/>
+                          <path d="M47.5 70C47.5 76.5 44 82 39 84.5C34 82 30.5 76.5 30.5 70V61L39 57.5L47.5 61V70Z" fill="#1C5AB8"/>
+                          <path d="M39 59.5V82.5C42.5 80.5 45 76.5 45 70V62L39 59.5Z" fill="#3D82E6"/>
+                          <path d="M35 70L38 73L43 66" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                          <rect x="80" y="58" width="65" height="10" rx="3" fill="white" fillOpacity="0.8"/>
+                          <text x="84" y="65" fill="#5C4103" fontFamily="Inter" fontSize="6" fontWeight="700">Security alert</text>
+                          <rect x="80" y="78" width="85" height="4" rx="2" fill="white" fillOpacity="0.6"/>
+                          <rect x="80" y="86" width="60" height="4" rx="2" fill="white" fillOpacity="0.6"/>
+                          <circle cx="175" cy="55" r="16" fill="#14BD7A" fillOpacity="0.2"/>
+                          <circle cx="175" cy="55" r="12" fill="#14BD7A"/>
+                          <path d="M172 56V52.5C172 50.8 173.3 49.5 175 49.5C176.7 49.5 178 50.8 178 52.5V56M170 56H180V61H170V56Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <div className="p-6 flex-1 flex flex-col justify-between">
+                      <h3 className="font-display font-bold text-base md:text-lg text-[#003087] leading-snug mb-2 text-left">
+                        Fraud and unusual account activity
+                      </h3>
+                      <button 
+                        onClick={() => setShowFraudModal(true)}
+                        className="text-[#0079C1] hover:text-[#005EA6] font-bold text-sm inline-flex items-center gap-1.5 mt-auto group text-left cursor-pointer"
+                      >
+                        <span>Report fraud</span>
+                        <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                      </button>
                     </div>
                   </div>
-                  <div className="p-6 flex-1 flex flex-col justify-between">
-                    <h3 className="font-display font-bold text-lg text-[#003087] leading-snug mb-4 text-left">
-                      Fraud and unusual account activity
-                    </h3>
-                    <button 
-                      onClick={() => setShowFraudModal(true)}
-                      className="text-[#0079C1] hover:text-[#005EA6] font-bold text-sm inline-flex items-center gap-1.5 mt-auto group text-left cursor-pointer"
-                    >
-                      <span>Report fraud</span>
-                      <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                    </button>
-                  </div>
-                </div>
 
-                {/* Card 3: Suspicious Message */}
-                <div className="lg:col-span-3 bg-[#F8F9FA] rounded-2xl overflow-hidden shadow-xs border border-[#E2E4E6] flex flex-col hover:-translate-y-1 hover:shadow-md transition-all">
-                  <div className="relative h-40 bg-[#0070BA] flex items-end justify-center select-none overflow-hidden">
-                    {/* SVG Illustration Header */}
-                    <div className="w-full flex items-center justify-center pb-2">
-                      <svg width="220" height="140" viewBox="0 0 220 140" fill="none" className="max-w-full h-auto">
-                        <g filter="url(#shadow-filter)">
-                          <rect x="30" y="25" width="130" height="42" rx="6" fill="white"/>
-                          <path d="M30 45L22 50L26 40" fill="white"/>
-                        </g>
-                        <circle cx="45" cy="38" r="8" fill="#F03E3E"/>
-                        <text x="43" y="44" fill="white" fontFamily="Inter" fontSize="12" fontWeight="800">!</text>
-                        <rect x="60" y="32" width="85" height="4" rx="2" fill="#E9ECEF"/>
-                        <rect x="60" y="42" width="70" height="4" rx="2" fill="#E9ECEF"/>
-                        <rect x="60" y="52" width="45" height="4" rx="2" fill="#E9ECEF"/>
+                  {/* Card 3: Suspicious Message */}
+                  <div className="flex-1 bg-[#F8F9FA] rounded-2xl overflow-hidden shadow-xs border border-[#E2E4E6] flex flex-row hover:-translate-y-0.5 hover:shadow-md transition-all">
+                    <div className="relative w-1/3 bg-[#0070BA] flex items-center justify-center select-none overflow-hidden shrink-0">
+                      <div className="w-full flex items-center justify-center p-2">
+                        <svg width="220" height="140" viewBox="0 0 220 140" fill="none" className="max-w-full h-auto scale-90">
+                          <g filter="url(#shadow-filter)">
+                            <rect x="30" y="25" width="130" height="42" rx="6" fill="white"/>
+                            <path d="M30 45L22 50L26 40" fill="white"/>
+                          </g>
+                          <circle cx="45" cy="38" r="8" fill="#F03E3E"/>
+                          <text x="43" y="44" fill="white" fontFamily="Inter" fontSize="12" fontWeight="800">!</text>
+                          <rect x="60" y="32" width="85" height="4" rx="2" fill="#E9ECEF"/>
+                          <rect x="60" y="42" width="70" height="4" rx="2" fill="#E9ECEF"/>
+                          <rect x="60" y="52" width="45" height="4" rx="2" fill="#E9ECEF"/>
 
-                        <g filter="url(#shadow-filter)">
-                          <rect x="50" y="65" width="140" height="46" rx="6" fill="white"/>
-                          <path d="M190 85L198 90L194 80" fill="white"/>
-                        </g>
-                        <circle cx="68" cy="80" r="9" fill="#1C5AB8"/>
-                        <path d="M65 80H71M71 80L69 78M71 80L69 82" stroke="white" strokeWidth="1.8" strokeLinecap="round"/>
-                        <rect x="82" y="74" width="95" height="12" rx="3" fill="#E7F5FF"/>
-                        <text x="86" y="82" fill="#1C5AB8" fontFamily="Inter" fontSize="6" fontWeight="700">FWD: phishing@Pay-Pal.com</text>
-                        <rect x="82" y="92" width="95" height="3" rx="1.5" fill="#CED4DA"/>
+                          <g filter="url(#shadow-filter)">
+                            <rect x="50" y="65" width="140" height="46" rx="6" fill="white"/>
+                            <path d="M190 85L198 90L194 80" fill="white"/>
+                          </g>
+                          <circle cx="68" cy="80" r="9" fill="#1C5AB8"/>
+                          <path d="M65 80H71M71 80L69 78M71 80L69 82" stroke="white" strokeWidth="1.8" strokeLinecap="round"/>
+                          <rect x="82" y="74" width="95" height="12" rx="3" fill="#E7F5FF"/>
+                          <text x="86" y="82" fill="#1C5AB8" fontFamily="Inter" fontSize="6" fontWeight="700">FWD: phishing@Pay-Pal.com</text>
+                          <rect x="82" y="92" width="95" height="3" rx="1.5" fill="#CED4DA"/>
 
-                        <defs>
-                          <filter id="shadow-filter" x="15" y="15" width="180" height="80" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-                            <feDropShadow dx="0" dy="3" stdDeviation="3" floodColor="#000000" floodOpacity="0.08"/>
-                          </filter>
-                        </defs>
-                      </svg>
+                          <defs>
+                            <filter id="shadow-filter" x="15" y="15" width="180" height="80" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                              <feDropShadow dx="0" dy="3" stdDeviation="3" floodColor="#000000" floodOpacity="0.08"/>
+                            </filter>
+                          </defs>
+                        </svg>
+                      </div>
+                    </div>
+                    <div className="p-6 flex-1 flex flex-col justify-between">
+                      <h3 className="font-display font-bold text-base md:text-lg text-[#003087] leading-snug mb-2 text-left">
+                        Suspicious email or text message
+                      </h3>
+                      <button 
+                        onClick={() => setShowPhishingModal(true)}
+                        className="text-[#0079C1] hover:text-[#005EA6] font-bold text-sm inline-flex items-center gap-1.5 mt-auto group text-left cursor-pointer"
+                      >
+                        <span>Report suspicious messages</span>
+                        <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                      </button>
                     </div>
                   </div>
-                  <div className="p-6 flex-1 flex flex-col justify-between">
-                    <h3 className="font-display font-bold text-lg text-[#003087] leading-snug mb-4 text-left">
-                      Suspicious email or text message
-                    </h3>
-                    <button 
-                      onClick={() => setShowPhishingModal(true)}
-                      className="text-[#0079C1] hover:text-[#005EA6] font-bold text-sm inline-flex items-center gap-1.5 mt-auto group text-left cursor-pointer"
-                    >
-                      <span>Report suspicious messages</span>
-                      <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                    </button>
-                  </div>
-                </div>
 
+                </div>
               </div>
             </section>
 
